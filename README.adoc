@@ -17,7 +17,7 @@ Just run the `build-images.sh` script to create the RabbitMQ docker container im
 
 Running the Cluster:
 ===============================
-Once the images are built, boot up the cluster using the docker-compose.yml configuration provided in cluster folder:    
+Once the images are built, boot up the cluster using the `docker-compose.yml` configuration provided in cluster folder:    
 
 [source]
 ----
@@ -25,12 +25,13 @@ cd cluster
 docker-compose up -d
 ----
 
-By default 3 nodes are started up this way (see file(docker-compose.yml)). 
+By default 3 nodes are started up this way see `docker-compose.yml` 
 
 If needed, additional nodes can be added to this file. If the entire cluster comes up, the management console can be accessed at http://<dockerip>:15672 and http://<dockerip>:15673 (also works for `localhost`)
-The username/password are specified in the file(docker-compose.yml): `myuser/mypass`
 
-and connection host should look like this: `dockerip:5672,dockerip:5673,dockerip:5674`
+The username/password are specified in `docker-compose.yml`: `myuser/mypass`
+
+and the connection host should look like this: `dockerip:5672,dockerip:5673,dockerip:5674`
 
 
     
